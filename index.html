@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07172e">
+<meta name="description" content="گالری نقره پارسام نقرههای وارداتی کیفیت و ظرافت بینظیر و قیمتهای منصفانه.">
+<title>گالری نقره پارسام | PARSAM SILVER</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #07172e;
+    --navy2: #102b4d;
+    --silver: #edf4ff;
+    --muted: #bdcce0;
+    --line: rgba(225,238,255,.28);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 35px 20px;
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    color: var(--silver);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(57,111,177,.32), transparent 45%),
+        radial-gradient(ellipse at 10% 90%, rgba(30,72,125,.25), transparent 38%),
+        linear-gradient(140deg, #020916, #0b1d36 52%, #030c1b);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .14;
+    background: repeating-linear-gradient(
+        120deg,
+        transparent 0 55px,
+        rgba(255,255,255,.05) 58px,
+        transparent 62px
+    );
+}
+
+.wrap {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+    position: relative;
+}
+
+.frame {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(25px, 4vw, 52px);
+    border: 1px solid rgba(224,238,255,.35);
+    border-radius: 30px;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(62,110,165,.2), transparent 55%),
+        linear-gradient(145deg, rgba(16,43,76,.98), rgba(3,13,29,.99));
+    box-shadow:
+        0 28px 85px rgba(0,0,0,.52),
+        inset 0 1px 0 rgba(255,255,255,.15),
+        inset 0 0 55px rgba(190,215,250,.04);
+}
+
+.top-layout {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 45px;
+    align-items: center;
+    direction: rtl;
+}
+
+.brand-side {
+    text-align: center;
+}
+
+.monogram {
+    font: 105px/.95 Georgia, serif;
+    color: #f7f9ff;
+    text-shadow: 0 4px 25px rgba(200,224,255,.55);
+}
+
+.brand {
+    margin-top: 10px;
+    direction: ltr;
+    font: bold clamp(38px, 5vw, 58px)/1.2 Georgia, serif;
+    letter-spacing: .2em;
+    color: #f7f9ff;
+    text-shadow: 0 4px 22px rgba(190,218,255,.3);
+}
+
+.silver-line {
+    width: 220px;
+    height: 1px;
+    margin: 18px auto;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+}
+
+.silver-word {
+    direction: ltr;
+    font: bold 18px Georgia, serif;
+    letter-spacing: .45em;
+}
+
+.tagline {
+    margin-top: 15px;
+    color: #cbd9ec;
+    direction: ltr;
+    font: italic 17px Georgia, serif;
+}
+
+/* گالری تصاویر */
+.jewel-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    padding: 16px;
+    border: 1px solid rgba(225,238,255,.3);
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(38,70,110,.7), rgba(3,14,30,.9));
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.14),
+        0 18px 40px rgba(0,0,0,.32);
+}
+
+.jewel-tile {
+    height: 250px;
+    min-width: 0;
+    display: grid;
+    place-items: center;
+    padding: 9px;
+    overflow: hidden;
+    border: 1px solid rgba(235,243,255,.25);
+    border-radius: 17px;
+    background: linear-gradient(145deg, rgba(5,16,34,.8), rgba(25,51,82,.55));
+    box-shadow: 0 9px 22px rgba(0,0,0,.3);
+}
+
+.jewel-tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 11px;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,.3));
+}
+
+/* متنهای معرفی */
+.headline {
+    margin: 40px 0 5px;
+    text-align: center;
+    font-size: clamp(27px, 3.5vw, 40px);
+    font-weight: 900;
+    line-height: 1.8;
+    color: #f7f9ff;
+    text-shadow: 0 4px 18px rgba(0,0,0,.4);
+}
+
+.intro {
+    text-align: center;
+    margin: 0 auto 25px;
+    color: #d3dfef;
+    font-size: 18px;
+}
+
+.ribbon {
+    width: min(100%, 700px);
+    margin: 25px auto;
+    padding: 13px 20px;
+    text-align: center;
+    color: #10213a;
+    font-weight: 900;
+    font-size: 22px;
+    border: 1px solid #fff;
+    border-radius: 14px 34px;
+    background: linear-gradient(110deg, #9caabd, #f8fbff 46%, #aebbd0);
+    box-shadow: 0 9px 25px rgba(0,0,0,.32), inset 0 1px 0 #fff;
+}
+
+.pill {
+    width: fit-content;
+    margin: 18px auto 22px;
+    padding: 9px 28px;
+    border: 1px solid rgba(226,237,252,.55);
+    border-radius: 999px;
+    color: #f2f6fd;
+    font-size: 19px;
+    font-weight: 800;
+    background: linear-gradient(120deg, rgba(255,255,255,.13), rgba(255,255,255,.035));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 7px 20px rgba(0,0,0,.2);
+}
+
+.features {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 30px;
+    padding: 0;
+    margin: 22px auto 28px;
+}
+
+.features li {
+    color: #e4ecf7;
+    font-size: 16px;
+}
+
+.features li::before {
+    content: "✧";
+    color: #dce8f8;
+    margin-left: 8px;
+    font-size: 19px;
+}
+
+.welcome {
+    margin: 30px 0 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* دکمههای ارتباطی */
+.actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 14px;
+}
+
+.action {
+    min-width: 0;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding: 13px 12px;
+    border: 1px solid rgba(226,238,255,.4);
+    border-radius: 17px;
+    color: #f6f9ff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    background: linear-gradient(
+        135deg,
+        rgba(179,205,239,.24),
+        rgba(48,78,117,.3) 48%,
+        rgba(7,23,44,.9)
+    );
+    box-shadow:
+        0 9px 23px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.2);
+    transition: all .25s ease;
+}
+
+.action:hover {
+    transform: translateY(-4px);
+    border-color: #f1f6ff;
+    background: linear-gradient(135deg, #29496e, #122b4b);
+    box-shadow: 0 14px 30px rgba(0,0,0,.4), 0 0 18px rgba(190,215,255,.16);
+}
+
+.icon {
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+    display: grid;
+    place-items: center;
+    color: #edf4ff;
+}
+
+.icon svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* شماره تماس */
+.contact {
+    margin-top: 22px;
+    padding: 22px;
+    text-align: center;
+    border: 1px solid rgba(220,233,250,.25);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(16,38,66,.8), rgba(3,13,28,.8));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+.contact-title {
+    color: #d1deef;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.phones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 30px;
+    direction: ltr;
+}
+
+.phones a {
+    color: #f4f7fd;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+.address {
+    color: #b9c9df;
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 14px;
+}
+
+footer {
+    text-align: center;
+    color: #91a2ba;
+    font: 12px Arial, sans-serif;
+    margin-top: 24px;
+    direction: ltr;
+    letter-spacing: .1em;
+}
+
+/* تبلت و موبایل */
+@media(max-width: 760px) {
+    body { padding: 16px 10px; }
+    .frame { padding: 25px 20px; border-radius: 24px; }
+    .top-layout { grid-template-columns: 1fr; gap: 26px; }
+    .jewel-gallery { max-width: 570px; width: 100%; margin: auto; }
+    .jewel-tile { height: clamp(150px, 34vw, 210px); }
+    .headline { margin-top: 28px; }
+    .actions { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media(max-width: 430px) {
+    .frame { padding: 22px 14px; }
+    .jewel-gallery { gap: 9px; padding: 10px; }
+    .jewel-tile { height: 145px; padding: 6px; }
+    .monogram { font-size: 78px; }
+    .brand { font-size: 36px; }
+    .headline { font-size: 25px; }
+    .intro { font-size: 15px; }
+    .ribbon { font-size: 19px; }
+    .features { gap: 8px 15px; }
+    .features li { font-size: 13px; }
+    .actions { gap: 9px; }
+    .action { min-height: 55px; padding: 10px 7px; gap: 7px; font-size: 13px; }
+    .icon, .icon svg { width: 22px; height: 22px; }
+    .icon { flex-basis: 22px; }
+    .phones a { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+<main class="wrap">
+<section class="frame">
+
+<div class="top-layout">
+
+<header class="brand-side">
+    <div class="monogram">P</div>
+    <div class="brand">PARSAM</div>
+    <div class="silver-line"></div>
+    <div class="silver-word">SILVER</div>
+    <div class="tagline">Beauty in Details...</div>
+</header>
+
+<div class="jewel-gallery">
+    <div class="jewel-tile">
+        <img src="assets/flyer-diamond.jpg" alt="الماس">
+    </div>
+    <div class="jewel-tile">
+        <img src="assets/flyer-silver-ring.jpg" alt="انگشتر نقره">
+    </div>
+</div>
+
+</div>
+
+<h1 class="headline">زیبایی را با نقره تجربه کنید!</h1>
+<p class="intro">با بهترین قیمتها و زیباترین نقرهها</p>
+
+<div class="ribbon">نقرههای وارداتی</div>
+<div class="pill">✧ گالری نقره پارسام ✧</div>
+
+<ul class="features">
+    <li>کیفیت و ظرافت بینظیر</li>
+    <li>قیمتهای منصفانه</li>
+    <li>تنوع بینظیر مدلها</li>
+</ul>
+
+<div class="welcome">منتظر شما هستیم!</div>
+
+<nav class="actions" aria-label="راههای ارتباط با گالری">
+
+<a class="action" href="https://www.instagram.com/parsam.silver/" target="_blank" rel="noopener noreferrer">
+<span class="icon">
+<svg viewBox="0 0 24 24">
+<rect x="3" y="3" width="18" height="18" rx="5"/>
+<circle cx="12" cy="12" r="4"/>
+<path d="M17.5 6.5h.01"/>
+</svg>
+</span>
+<span>اینستاگرام</span>
+</a>
+
+<a class="action" href="https://nshn.ir/397bZqeKOxnPbh" target="_blank" rel="noopener noreferrer">
+<span class="icon">
+<svg viewBox="0 0 24 24">
+<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+<circle cx="12" cy="10" r="2.5"/>
+</svg>
+</span>
+<span>مسیریابی و لوکیشن</span>
+</a>
+
+<a class="action" href="tel:09012135273">
+<span class="icon">
+<svg viewBox="0 0 24 24">
+<path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 3a15 15 0 0 1-7-7l3-2-3-5Z"/>
+</svg>
+</span>
+<span>تماس اول</span>
+</a>
+
+<a class="action" href="tel:091003212041">
+<span class="icon">
+<svg viewBox="0 0 24 24">
+<path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 3a15 15 0 0 1-7-7l3-2-3-5Z"/>
+</svg>
+</span>
+<span>تماس دوم</span>
+</a>
+
+<a class="action" href="https://eitaa.com/parsamsilver" target="_blank" rel="noopener noreferrer">
+<span class="icon">
+<svg viewBox="0 0 24 24">
+<path d="m21 3-7.2 18-3.9-7.1L3 10.2 21 3Z"/>
+<path d="m9.9 13.9 4.5-4.5"/>
+</svg>
+</span>
+<span>کانال ایتا</span>
+</a>
+
+</nav>
+
+<section class="contact">
+<div class="contact-title">ارتباط مستقیم با ما</div>
+<div class="phones">
+<a href="tel:09012135273">09012135273</a>
+<a href="tel:091003212041">091003212041</a>
+</div>
+<div class="address">
+برای مشاهده موقعیت گالری روی دکمه «مسیریابی و لوکیشن» بزنید.
+</div>
+</section>
+
+<footer>PARSAM SILVER · BEAUTY IN DETAILS</footer>
+
+</section>
+</main>
+</body>
+</html>
